@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+E_U1         out 0 VALUE {LIMIT(V(in1,in2)*1E6,-15V,+15V)}
+R_R1         0 out  1k  
+V_V1         in1 0 1.5V
+V_V2         in2 0 1V

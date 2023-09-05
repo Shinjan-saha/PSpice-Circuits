@@ -1,0 +1,148 @@
+
+**** 09/05/23 12:12:04 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Sep 05 12:10:28 2023
+
+
+
+** Analysis setup **
+.tran 0ns 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+E_U1         out 0 VALUE {LIMIT(V(in1,in2)*1E6,-15V,+15V)}
+R_R1         0 out  1k  
+V_V1         in1 0 1.5V
+V_V2         in2 0 1V
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+E_U1            U1(OUT=out +=in1 -=in2 )
+R_R1            R1(1=0 2=out )
+V_V1            V1(+=in1 -=0 )
+V_V2            V2(+=in2 -=0 )
+_    _(in1=in1)
+_    _(in2=in2)
+_    _(out=out)
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 09/05/23 12:12:04 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  in1)    1.5000  (  in2)    1.0000  (  out)   15.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 09/05/23 12:12:04 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE     1.500E+01
+I-SOURCE    -1.500E-02
+**** 09/05/23 12:12:04 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  in1)    1.5000  (  in2)    1.0000  (  out)   15.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+
