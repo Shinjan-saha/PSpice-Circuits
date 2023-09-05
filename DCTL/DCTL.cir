@@ -1,0 +1,23 @@
+* C:\Users\SHINJAN SAHA\Documents\PSpice program\DCTL.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Sep 05 20:35:22 2023
+
+
+
+** Analysis setup **
+.tran 0ns 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "DCTL.net"
+.INC "DCTL.als"
+
+
+.probe
+
+
+.END
