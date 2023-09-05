@@ -1,0 +1,222 @@
+
+**** 09/05/23 12:52:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\RTL.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Sep 05 12:52:00 2023
+
+
+
+** Analysis setup **
+.tran 0ms 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "RTL.net"
+
+**** INCLUDING RTL.net ****
+* Schematics Netlist *
+
+
+
+R_R1         out $N_0001  1k  
+R_R2         $N_0002 in1  1k  
+Q_Q2         out $N_0003 0 Q2N3904
+Q_Q1         out in1 0 Q2N3904
+R_R5         $N_0003 $N_0004  1k  
+V_V6         $N_0004 0 0V
+V_V2         $N_0002 0 5V
+V_V1         0 $N_0001 5V
+
+**** RESUMING RTL.cir ****
+.INC "RTL.als"
+
+
+
+**** INCLUDING RTL.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=out 2=$N_0001 )
+R_R2            R2(1=$N_0002 2=in1 )
+Q_Q2            Q2(c=out b=$N_0003 e=0 )
+Q_Q1            Q1(c=out b=in1 e=0 )
+R_R5            R5(1=$N_0003 2=$N_0004 )
+V_V6            V6(+=$N_0004 -=0 )
+V_V2            V2(+=$N_0002 -=0 )
+V_V1            V1(+=0 -=$N_0001 )
+_    _(out=out)
+_    _(in1=in1)
+.ENDALIASES
+
+
+**** RESUMING RTL.cir ****
+.probe
+
+
+.END
+
+**** 09/05/23 12:52:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\RTL.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+          RB   10            
+          RC    1            
+         CJE    4.493000E-12 
+         MJE     .2593       
+         CJC    3.638000E-12 
+         MJC     .3085       
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 09/05/23 12:52:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\RTL.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  in1)     .7303  (  out)    -.0122  ($N_0001)   -5.0000                       
+
+($N_0002)    5.0000                   ($N_0003)-22.12E-12                       
+
+($N_0004)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -2.212E-14
+    V_V2        -4.270E-03
+    V_V1        -4.988E-03
+
+    TOTAL POWER DISSIPATION   4.63E-02  WATTS
+
+
+**** 09/05/23 12:52:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\RTL.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q2        Q_Q1      
+MODEL        Q2N3904     Q2N3904   
+IB           2.21E-14    4.27E-03 
+IC          -3.84E-14   -4.99E-03 
+VBE         -2.21E-11    7.30E-01 
+VBC          1.22E-02    7.43E-01 
+VCE         -1.22E-02   -1.22E-02 
+BETADC      -1.74E+00   -1.17E+00 
+GM          -1.57E-13   -2.75E-02 
+RPI          4.77E+12    1.90E+03 
+RX           1.00E+01    1.00E+01 
+RO           7.06E+11    8.61E+00 
+CBE          4.49E-12    3.21E-11 
+CBC          3.66E-12    2.90E-08 
+CJS          0.00E+00    0.00E+00 
+BETAAC      -7.49E-01   -5.21E+01 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2      -3.07E-03   -1.50E+05 
+
+
+**** 09/05/23 12:52:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\SHINJAN SAHA\Documents\PSpice program\RTL.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  in1)     .7303  (  out)    -.0122  ($N_0001)   -5.0000                       
+
+($N_0002)    5.0000                   ($N_0003)-22.12E-12                       
+
+($N_0004)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -2.212E-14
+    V_V2        -4.270E-03
+    V_V1        -4.988E-03
+
+    TOTAL POWER DISSIPATION   4.63E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

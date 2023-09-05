@@ -1,0 +1,206 @@
+*version 9.1 1201446236
+u 55
+Q? 3
+R? 5
+V? 6
+? 4
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0ns
++1 1ms
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3452 
+@status
+n 2402 123:08:05:12:45:38;1693898138 e 
+c 123:08:05:12:47:22;1693898242
+*page 1 0 970 720 iA
+@ports
+port 7 GND_ANALOG 360 210 h
+port 42 GND_ANALOG 360 40 u
+port 44 GND_ANALOG 280 270 h
+port 43 GND_ANALOG 340 160 u
+@parts
+part 2 Q2N3904 300 170 h
+a 0 sp 11 0 25 40 hln 100 PART=Q2N3904
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=TO-92
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=Q1
+a 0 ap 9 0 5 5 hln 100 REFDES=Q1
+part 4 r 360 120 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 ap 9 0 15 0 hln 100 REFDES=R1
+part 5 r 280 230 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R2
+a 0 ap 9 0 15 0 hln 100 REFDES=R2
+part 3 Q2N3904 390 170 h
+a 0 sp 11 0 25 40 hln 100 PART=Q2N3904
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=TO-92
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=Q2
+a 0 ap 9 0 5 5 hln 100 REFDES=Q2
+part 29 r 350 170 h
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R4
+a 0 ap 9 0 15 0 hln 100 REFDES=R4
+part 30 VDC 360 40 h
+a 1 u 13 0 -11 18 hcn 100 DC=5V
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 ap 9 0 24 7 hcn 100 REFDES=V1
+part 33 VDC 280 230 h
+a 1 u 13 0 -11 18 hcn 100 DC=5V
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 24 7 hcn 100 REFDES=V2
+part 36 VDC 320 170 v
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V5
+a 1 ap 9 0 24 7 hcn 100 REFDES=V5
+part 35 VDC 320 170 v
+a 0 sp 0 0 22 37 hln 100 PART=VDC
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V4
+a 1 ap 9 0 24 7 hcn 100 REFDES=V4
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+part 37 nodeMarker 280 170 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=in1
+a 0 a 0 0 4 22 hlb 100 LABEL=1
+part 40 nodeMarker 390 170 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 4 22 hlb 100 LABEL=3
+part 38 nodeMarker 410 120 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=out
+a 0 a 0 0 4 22 hlb 100 LABEL=2
+@conn
+w 18
+s 410 190 410 210 17
+s 410 210 360 210 21
+s 360 210 320 210 22
+s 320 210 320 190 23
+w 26
+a 0 sr 0 0 0 0 hln 100 LABEL=in1
+s 300 170 280 170 25
+a 0 sr 3 0 290 168 hcn 100 LABEL=in1
+s 280 170 280 190 27
+w 16
+s 390 170 380 170 15
+w 9
+a 0 sr 0 0 0 0 hln 100 LABEL=out
+s 440 120 410 120 31
+a 0 sr 3 0 425 118 hcn 100 LABEL=out
+s 320 150 320 120 8
+s 320 120 360 120 10
+s 360 120 410 120 12
+s 410 120 410 150 13
+w 53
+s 320 160 320 170 51
+s 320 160 340 160 52
+@junction
+j 390 170
++ p 3 b
++ w 16
+j 410 190
++ p 3 e
++ w 18
+j 360 210
++ s 7
++ w 18
+j 360 80
++ p 30 -
++ p 4 2
+j 390 170
++ p 29 2
++ p 3 b
+j 390 170
++ p 29 2
++ w 16
+j 280 230
++ p 33 +
++ p 5 1
+j 390 170
++ p 40 pin1
++ p 3 b
+j 390 170
++ p 40 pin1
++ p 29 2
+j 390 170
++ p 40 pin1
++ w 16
+j 280 190
++ p 5 2
++ w 26
+j 280 170
++ p 37 pin1
++ w 26
+j 360 40
++ s 42
++ p 30 +
+j 280 270
++ s 44
++ p 33 -
+j 320 150
++ p 2 c
++ w 9
+j 320 190
++ p 2 e
++ w 18
+j 300 170
++ p 2 b
++ w 26
+j 360 120
++ p 4 1
++ w 9
+j 410 150
++ p 3 c
++ w 9
+j 410 120
++ w 9
++ w 9
+j 410 120
++ p 38 pin1
++ w 9
+j 320 170
++ p 36 +
++ p 35 +
+j 360 170
++ p 36 -
++ p 35 -
+j 320 170
++ p 36 +
++ w 53
+j 320 170
++ p 35 +
++ w 53
+j 340 160
++ s 43
++ w 53
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
