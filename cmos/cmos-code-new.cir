@@ -1,0 +1,14 @@
+Simultation of CMOS Inverter:
+
+**inverter
+VDD 2 0 5V
+VIN 1 0 0V
+Mn 3 1 0 0 nMOD w=10u l=20u
+Mp 3 1 2 2 pMOD w=10u l=20u
+.dc VIN 0v 5v .25v
+.model nMOD nMOS(Vto=1 kp=20v)
+.model pMOD pMOS(Vto=-1 kp=20v)
+.plot dc V(3)
+.probe
+.end 
+
